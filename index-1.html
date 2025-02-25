@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Running Image and Text</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            background-color: #f4f4f4;
+            position: relative;
+            height: 100vh;
+        }
+        .marquee-text {
+            position: absolute;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            top: 10%;
+            animation: marqueeText 8s linear infinite;
+        }
+        @keyframes marqueeText {
+            from { transform: translateX(100%); }
+            to { transform: translateX(calc(-100% - 10px)); }
+        }
+        .marquee-image {
+            position: absolute;
+            bottom: 20%;
+            width: 250px;
+            height: 100px;
+            animation: marqueeImage 8s linear infinite;
+        }
+        @keyframes marqueeImage {
+            from { left: 100%; }
+            to { left: -100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="marquee-text">
+        This is a running text message.
+    </div>
+    <img src="https://wallpapercave.com/wp/wp12623673.png" alt="Running Image" class="marquee-image">
+</body>
+</html>
